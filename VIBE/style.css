@@ -1,0 +1,1447 @@
+/* =====================================================
+   VIBE — CREATOR DASHBOARD
+   PixelCraft CSS Reference Project
+===================================================== */
+
+
+/* =====================================================
+   1. CSS VARIABLES
+===================================================== */
+
+:root {
+
+    --bg: #09090b;
+
+    --surface: #141417;
+
+    --surface-light: #1d1d22;
+
+    --text: #f8fafc;
+
+    --muted: #a1a1aa;
+
+    --primary: #a855f7;
+
+    --secondary: #22d3ee;
+
+    --accent: #f472b6;
+
+    --success: #86efac;
+
+    --border: rgba(255, 255, 255, 0.09);
+
+    --glass: rgba(255, 255, 255, 0.06);
+
+    --radius: 22px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   2. RESET / GLOBAL
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(168, 85, 247, 0.16),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 65%,
+            rgba(34, 211, 238, 0.10),
+            transparent 28%
+        ),
+
+        var(--bg);
+
+    overflow-x: hidden;
+}
+
+
+button {
+
+    font: inherit;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   3. NAVBAR — FLEXBOX
+===================================================== */
+
+.navbar {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    padding: 24px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(9, 9, 11, 0.70);
+
+    backdrop-filter:
+        blur(16px);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+}
+
+
+/* =====================================================
+   4. LOGO
+===================================================== */
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   5. NAVIGATION
+===================================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.nav-links a:hover {
+
+    color: var(--text);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   6. PROFILE BUTTON
+===================================================== */
+
+.profile-btn {
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+
+.profile-btn:hover {
+
+    background:
+        var(--surface-light);
+
+    border-color:
+        rgba(168, 85, 247, 0.5);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   7. HERO — FLEXBOX
+===================================================== */
+
+.hero {
+
+    width: min(1200px, 90%);
+
+    min-height: 72vh;
+
+    margin: auto;
+
+    padding:
+        90px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* =====================================================
+   8. HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    max-width: 680px;
+}
+
+
+.eyebrow {
+
+    margin-bottom: 20px;
+
+    color:
+        #c4b5fd;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+}
+
+
+.hero-content h1 {
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            6rem
+        );
+
+    line-height:
+        0.95;
+
+    letter-spacing:
+        -4px;
+
+    margin-bottom:
+        28px;
+}
+
+
+.hero-content h1 span {
+
+    display:
+        block;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    background-clip:
+        text;
+
+    -webkit-background-clip:
+        text;
+
+    color:
+        transparent;
+}
+
+
+/* =====================================================
+   9. DESCRIPTION
+===================================================== */
+
+.description {
+
+    max-width:
+        540px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        17px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        32px;
+}
+
+
+/* =====================================================
+   10. HERO ACTIONS
+===================================================== */
+
+.hero-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+/* =====================================================
+   11. PRIMARY BUTTON
+===================================================== */
+
+.primary-btn {
+
+    padding:
+        14px 22px;
+
+    border:
+        none;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:
+        white;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 14px 35px
+        rgba(168, 85, 247, 0.30);
+}
+
+
+.primary-btn span {
+
+    display:
+        inline-block;
+
+    margin-left:
+        5px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.primary-btn:hover span {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =====================================================
+   12. SECONDARY BUTTON
+===================================================== */
+
+.secondary-btn {
+
+    padding:
+        14px 22px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+
+.secondary-btn:hover {
+
+    background:
+        var(--surface-light);
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =====================================================
+   13. VISUAL CARD — POSITIONING + GLASS
+===================================================== */
+
+.visual-card {
+
+    width:
+        340px;
+
+    min-height:
+        340px;
+
+    padding:
+        40px;
+
+    flex-shrink:
+        0;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.03)
+        );
+
+    backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.35);
+
+    animation:
+        float 3s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* =====================================================
+   14. FLOATING BADGE — ABSOLUTE POSITIONING
+===================================================== */
+
+.floating-badge {
+
+    position:
+        absolute;
+
+    top:
+        20px;
+
+    right:
+        20px;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        50px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(168, 85, 247, 0.25);
+}
+
+
+/* =====================================================
+   15. VISUAL ICON
+===================================================== */
+
+.visual-icon {
+
+    width:
+        105px;
+
+    height:
+        105px;
+
+    margin-bottom:
+        24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    font-size:
+        55px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(168, 85, 247, 0.25);
+}
+
+
+.visual-card h2 {
+
+    margin-bottom:
+        8px;
+
+    font-size:
+        25px;
+}
+
+
+.visual-card > p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+}
+
+
+/* =====================================================
+   16. CARD STATUS
+===================================================== */
+
+.card-status {
+
+    margin-top:
+        25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+}
+
+
+.card-status span {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--success);
+
+    box-shadow:
+        0 0 12px
+        var(--success);
+}
+
+
+/* =====================================================
+   17. STATS — CSS GRID
+===================================================== */
+
+.stats {
+
+    width:
+        min(1200px, 90%);
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                220px,
+                1fr
+            )
+        );
+
+    gap:
+        20px;
+}
+
+
+/* =====================================================
+   18. STAT CARD
+===================================================== */
+
+.stat-card {
+
+    padding:
+        28px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--surface);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+}
+
+
+.stat-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(168, 85, 247, 0.45);
+
+    background:
+        var(--surface-light);
+}
+
+
+/* =====================================================
+   19. STAT TOP
+===================================================== */
+
+.stat-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+}
+
+
+.stat-icon {
+
+    color:
+        var(--primary);
+
+    font-size:
+        18px;
+}
+
+
+/* =====================================================
+   20. STAT NUMBER
+===================================================== */
+
+.stat-card strong {
+
+    display:
+        block;
+
+    margin:
+        14px 0 6px;
+
+    font-size:
+        42px;
+
+    letter-spacing:
+        -2px;
+}
+
+
+.stat-card small {
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+.stat-card small span {
+
+    color:
+        var(--success);
+
+    font-weight:
+        700;
+}
+
+
+/* =====================================================
+   21. CREATOR SECTION
+===================================================== */
+
+.creator-section {
+
+    width:
+        min(1200px, 90%);
+
+    margin:
+        100px auto;
+
+}
+
+
+/* =====================================================
+   22. SECTION HEADING — FLEXBOX
+===================================================== */
+
+.section-heading {
+
+    margin-bottom:
+        30px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+
+.section-heading h2 {
+
+    margin-top:
+        5px;
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            3rem
+        );
+
+    letter-spacing:
+        -2px;
+}
+
+
+.section-heading .eyebrow {
+
+    margin-bottom:
+        0;
+}
+
+
+.view-link {
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    transition:
+        color var(--transition);
+}
+
+
+.view-link:hover {
+
+    color:
+        var(--text);
+}
+
+
+/* =====================================================
+   23. CREATOR GRID
+===================================================== */
+
+.creator-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap:
+        20px;
+}
+
+
+/* =====================================================
+   24. CREATOR CARD
+===================================================== */
+
+.creator-card {
+
+    min-height:
+        300px;
+
+    padding:
+        28px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--surface);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+    overflow:
+        hidden;
+}
+
+
+.creator-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   25. FEATURED CREATOR IMAGE
+===================================================== */
+
+.creator-image {
+
+    height:
+        150px;
+
+    margin:
+        -28px -28px 25px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    padding:
+        20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #ec4899,
+            #06b6d4
+        );
+}
+
+
+.creator-image span {
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(0,0,0,0.35);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =====================================================
+   26. CREATOR MINI ICON
+===================================================== */
+
+.creator-mini-icon {
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    margin-bottom:
+        25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(168,85,247,0.15);
+
+    color:
+        #c4b5fd;
+
+    font-size:
+        24px;
+}
+
+
+.creator-mini-icon.pink {
+
+    background:
+        rgba(244,114,182,0.12);
+
+    color:
+        var(--accent);
+}
+
+
+/* =====================================================
+   27. TAG
+===================================================== */
+
+.tag {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--secondary);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+/* =====================================================
+   28. CREATOR CONTENT
+===================================================== */
+
+.creator-card h3 {
+
+    max-width:
+        320px;
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        21px;
+
+    line-height:
+        1.2;
+}
+
+
+.creator-card p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =====================================================
+   29. CARD BUTTON
+===================================================== */
+
+.card-btn {
+
+    margin-top:
+        25px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        10px;
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+
+.card-btn:hover {
+
+    background:
+        var(--surface-light);
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =====================================================
+   30. FLOATING ANIMATION
+===================================================== */
+
+@keyframes float {
+
+    from {
+
+        transform:
+            translateY(0);
+    }
+
+    to {
+
+        transform:
+            translateY(-14px);
+    }
+}
+
+
+/* =====================================================
+   31. FOOTER
+===================================================== */
+
+footer {
+
+    padding:
+        35px 5%;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.06);
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+/* =====================================================
+   32. TABLET RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        gap:
+            40px;
+    }
+
+
+    .visual-card {
+
+        width:
+            300px;
+
+        min-height:
+            300px;
+    }
+
+
+    .creator-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .creator-card.featured {
+
+        grid-column:
+            span 2;
+    }
+
+}
+
+
+/* =====================================================
+   33. MOBILE RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        width:
+            90%;
+    }
+
+
+    .nav-links {
+
+        display:
+            none;
+    }
+
+
+    .hero {
+
+        min-height:
+            auto;
+
+        padding:
+            65px 0;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .hero-content {
+
+        max-width:
+            100%;
+    }
+
+
+    .hero-content h1 {
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .description {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+
+    .hero-actions {
+
+        justify-content:
+            center;
+    }
+
+
+    .visual-card {
+
+        width:
+            100%;
+
+        max-width:
+            340px;
+    }
+
+
+    .creator-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .creator-card.featured {
+
+        grid-column:
+            auto;
+    }
+
+
+    .section-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+}
+
+
+/* =====================================================
+   34. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .profile-btn {
+
+        display:
+            none;
+    }
+
+
+    .hero-content h1 {
+
+        font-size:
+            clamp(
+                2.7rem,
+                14vw,
+                4rem
+            );
+    }
+
+
+    .description {
+
+        font-size:
+            16px;
+    }
+
+
+    .hero-actions {
+
+        width:
+            100%;
+
+        flex-direction:
+            column;
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+
+        width:
+            100%;
+    }
+
+
+    .visual-card {
+
+        min-height:
+            300px;
+    }
+
+
+    .stat-card strong {
+
+        font-size:
+            36px;
+    }
+
+}
